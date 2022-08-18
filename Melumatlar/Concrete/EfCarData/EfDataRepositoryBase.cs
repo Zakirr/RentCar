@@ -13,30 +13,31 @@ namespace Melumatlar.Concrete.EfCarData
 {
     public class EfDataRepositoryBase<T>:IDataRepository<T>
         where T:class,IEntity,new()
-    {    public void Add(T car)
+    {    public void Add(T entity)
         {
             using (DataContext context = new DataContext())
             {
-                var result = context.Entry(car);
+                
+                var result = context.Entry(entity);
                 result.State = EntityState.Added;
                 context.SaveChanges();
             }
         }
 
-        public void Delete(T car)
+        public void Delete(T entity)
         {
             using (DataContext context = new DataContext())
             {
-                var result = context.Entry(car);
+                var result = context.Entry(entity);
                 result.State = EntityState.Deleted;
                 context.SaveChanges();
             }
         }
-        public void Update(T car)
+        public void Update(T entity)
         {
             using (DataContext context = new DataContext())
             {
-                var result = context.Entry(car);
+                var result = context.Entry(entity);
                 result.State = EntityState.Modified;
                 context.SaveChanges();
             }

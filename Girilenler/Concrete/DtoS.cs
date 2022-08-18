@@ -1,20 +1,18 @@
-﻿using Melumatlar.Abstract;
+﻿using Entities.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Girilenler.Concrete
+namespace Entities.Concrete
 {
-    public class Car:IEntity
+    public class DtoS:IDtoS
     {
+
         public int Id { get; set; }
         public int BrandId { get; set; }
+        public string ColorName { get; set; }
         public int ColorId { get; set; }
-        public int ModelYear { get; set; }
-        public string Descripton { get; set; }
-        public decimal DailyPrice { get; set; }
-
     }
 }

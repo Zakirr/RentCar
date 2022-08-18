@@ -1,4 +1,5 @@
-﻿using Girilenler.Concrete;
+﻿using Entities.Concrete;
+using Girilenler.Concrete;
 using Melumatlar.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,7 +13,7 @@ namespace Melumatlar.Abstract
 {
     public interface ICarData:IDataRepository<Car>
     {
-
+        public List<DtoS> Joins();
         
     }
 }

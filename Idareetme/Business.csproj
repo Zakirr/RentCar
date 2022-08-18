@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Girilenler\Girilenler.csproj" />
-    <ProjectReference Include="..\Melumatlar\Melumatlar.csproj" />
+    <ProjectReference Include="..\Girilenler\Entities.csproj" />
+    <ProjectReference Include="..\Melumatlar\DataAcces.csproj" />
   </ItemGroup>
 
 </Project>
