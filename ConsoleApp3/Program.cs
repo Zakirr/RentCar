@@ -13,5 +13,6 @@ static void CarTest()
     RentCarManager rm = new RentCarManager(new EfColorData());
     //rm.Add(new Car { Id=35});
     rm.Add(new Color { ColorId = 15,ColorName="Qirmizi"});
+
 }
 
