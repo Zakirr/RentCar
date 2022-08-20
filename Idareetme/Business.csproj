@@ -7,12 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Girilenler\Entities.csproj" />
     <ProjectReference Include="..\Melumatlar\DataAcces.csproj" />
+    <ProjectReference Include="..\Utilites\Utilites.csproj" />
   </ItemGroup>
 
 </Project>

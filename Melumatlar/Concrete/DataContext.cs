@@ -1,4 +1,5 @@
-﻿using Girilenler.Concrete;
+﻿using Entities.Concrete;
+using Girilenler.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System;
@@ -20,5 +21,8 @@ namespace Melumatlar.Concrete
         public DbSet<Car> Car { get; set; }
         public DbSet<Color> Color { get; set; }
         public DbSet<Brand> Brand { get; set; }
+        public DbSet<Users> Users { get; set; }
+        //public DbSet<Customers> Customers { get; set; }
+        public DbSet<Rentals> Rentals { get; set; }
     }
 }

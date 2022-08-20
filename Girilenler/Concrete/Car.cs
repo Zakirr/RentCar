@@ -15,6 +15,7 @@ namespace Girilenler.Concrete
         public int ModelYear { get; set; }
         public string Descripton { get; set; }
         public decimal DailyPrice { get; set; }
+        public string CarName { get; set; }
 
     }
 }
