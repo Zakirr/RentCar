@@ -83,32 +83,16 @@ namespace Business.Concrete
 
         public IDataResult<Color> GetById(int id)
         {
-            if (DateTime.Now.Month == a)
+            var result = _icolorData.Get(c => c.ColorId == id);
+            if (DateTime.Now.Month == a||result==null)
             {
                 return new DataErrorResult<Color>("Error getById");
             }
 
-            return new DataSuccessResult<Color>(_icolorData.Get(c => c.ColorId == id), "Success getById");
+            return new DataSuccessResult<Color>(result, "Success getById");
 
         }
-        //public IDataResult<List<Color>> GetColorsByBrandID(int brandId)
-        //{
-        //    if (DateTime.Now.Month == a)
-        //    {
-        //        return new DataErrorResult<List<Color>>("Error getColorsByBrandId");
-        //    }
-        //    return new DataSuccessResult<List<Color>>(_icolorData.GetAll(p => p.BrandId == brandId), "Success getColorsByBrandId");
-        //}
-        //public IDataResult<List<Color>> GetColorsByColorID(int colorId)
-        //{
-        //    if (DateTime.Now.Month == a)
-        //    {
-        //        return new DataErrorResult<List<Color>>("Error GetColorsByColorID");
-        //    }
-        //    return new DataSuccessResult<List<Color>>(_icolorData.GetAll(p => p.ColorId == colorId), "Success GetColorsByColorID");
-        //}
-
-       
+     
 
 
 

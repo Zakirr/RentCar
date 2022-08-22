@@ -12,5 +12,6 @@ namespace Business.Abstract
     {
         IDataResult<Rentals> Add(Rentals rentals);
         IDataResult<Rentals> Return(Rentals rentals);
+        IDataResult <List<Rentals>> GetAll();
     }
 }

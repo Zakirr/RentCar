@@ -77,10 +77,10 @@ namespace Idareetme.Concrete
         {
             if (DateTime.Now.Month == a)
             {
-                return new DataErrorResult<List<Car>>("A");
+                return new DataErrorResult<List<Car>>("Error abi");
             }
 
-            return new DataSuccessResult<List<Car>>(_icarData.GetAll());
+            return new DataSuccessResult<List<Car>>(_icarData.GetAll(),"Success abi");
         }
 
         public IDataResult<Car> GetById(int id)

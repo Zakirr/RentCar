@@ -17,6 +17,10 @@ namespace Idareetme.Abstract
         public IDataResult<Car> Add(Car car);
         public IDataResult<Car> Delete(Car car);
         public IDataResult<Car> Update(Car car);
+        public IDataResult<List<Car>> GetCarsByBrandID(int brandId);
+
+        public IDataResult<List<Car>> GetCarsByColorID(int colorId);
+      
         //public List<Car> GetById(int id);
         //public List<Car> Add(Car car);
         //public List<Car> Delete(Car car);
