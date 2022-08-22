@@ -12,6 +12,10 @@ using Utilites.Concrete;
 using Utilites.Abstract;
 using System.Runtime.ConstrainedExecution;
 using System.Drawing;
+using FluentValidation;
+using Business.ValidationRules;
+using CoreAndUtilites.CrossCuttingConcerns.Validation;
+using CoreAndUtilites.Aspects.Autofac.Validation;
 
 namespace Idareetme.Concrete
 {
@@ -29,14 +33,11 @@ namespace Idareetme.Concrete
            
         }
 
-       
+        [ValidationAspect(typeof (CarValidator))]
         public IDataResult<Car> Add(Car car)
         {
-            //if (DateTime.Now.Month==a)
-            //{
-            //    return new DataErrorResult<Car>("Elave olunmadi");
 
-            //}
+            ValidationTool.Validate(new CarValidator(), car);
             _icarData.Add(car);
             return new DataSuccessResult<Car>("Elave olundu");
         }

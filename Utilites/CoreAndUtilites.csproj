@@ -8,14 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
     <PackageReference Include="FluentValidation" Version="11.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Girilenler\Entities.csproj" />
-    <ProjectReference Include="..\Melumatlar\DataAcces.csproj" />
-    <ProjectReference Include="..\Utilites\CoreAndUtilites.csproj" />
   </ItemGroup>
 
 </Project>
