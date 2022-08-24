@@ -6,16 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Girilenler\Entities.csproj" />
-    <ProjectReference Include="..\Idareetme\Business.csproj" />
-    <ProjectReference Include="..\Melumatlar\DataAcces.csproj" />
-    <ProjectReference Include="..\Utilites\CoreAndUtilites.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -1,17 +1,12 @@
 ﻿using Business.Abstract;
 using Girilenler.Concrete;
 using Melumatlar.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Utilites.Abstract;
 using Utilites.Concrete;
 
 namespace Business.Concrete
 {
-    public class RentBrandManager: IRentBrandManager
+    public class RentBrandManager : IRentBrandManager
     {
         IBrandData _ibrandData;
         int a = 9;

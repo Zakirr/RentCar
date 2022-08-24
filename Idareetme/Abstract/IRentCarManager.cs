@@ -1,11 +1,5 @@
 ﻿using Girilenler.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Utilites.Abstract;
-using Utilites.Concrete;
 
 namespace Idareetme.Abstract
 {
@@ -20,7 +14,7 @@ namespace Idareetme.Abstract
         public IDataResult<List<Car>> GetCarsByBrandID(int brandId);
 
         public IDataResult<List<Car>> GetCarsByColorID(int colorId);
-      
+
         //public List<Car> GetById(int id);
         //public List<Car> Add(Car car);
         //public List<Car> Delete(Car car);

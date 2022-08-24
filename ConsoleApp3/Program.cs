@@ -1,13 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Girilenler.Concrete;
+using Business.Concrete;
+using DataAcces.Concrete.EfCarData;
+using Entities.Concrete;
 using Idareetme.Concrete;
 using Melumatlar.Concrete.EfCarData;
-using Girilenler.Concrete;
-using Business.Concrete;
-using Entities.Abstract;
-using Entities.Concrete;
-using Utilites.Concrete;
-using DataAcces.Concrete.EfCarData;
 
 CarTest();
 
@@ -22,8 +18,8 @@ static void CarTest()
     RentalsManager rem = new RentalsManager(new EfRentalData());
 
 
-   
-    var result = rem.Add(new Rentals { CarId = 5,CustomerId=6,Id=9 });
+
+    var result = rem.Add(new Rentals { CarId = 5, CustomerId = 6, Id = 9 });
     Console.WriteLine(result.Message);
 
 }

@@ -1,13 +1,6 @@
-﻿using Melumatlar.Abstract;
+﻿using Entities.Concrete;
 using Girilenler.Concrete;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using Entities.Concrete;
+using Melumatlar.Abstract;
 
 namespace Melumatlar.Concrete.EfCarData
 {
@@ -15,7 +8,7 @@ namespace Melumatlar.Concrete.EfCarData
     {
         public List<DtoS> Joins()
         {
-            using (DataContext context=new DataContext())
+            using (DataContext context = new DataContext())
             {
                 var result = from c in context.Car
                              join cl in context.Color

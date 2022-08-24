@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Girilenler\Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
 </Project>

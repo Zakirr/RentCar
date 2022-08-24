@@ -1,17 +1,12 @@
 ﻿using Business.Abstract;
 using DataAcces.Abstract;
 using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Utilites.Abstract;
 using Utilites.Concrete;
 
 namespace Business.Concrete
 {
-    public class RentalsManager: IRentalsManager
+    public class RentalsManager : IRentalsManager
     {
         IRentalsData _rentalData;
 
@@ -31,35 +26,35 @@ namespace Business.Concrete
                     return new DataErrorResult<Rentals>("Masin istifadededir");
                 }
             }
-            
+
             rentals.RentDate = DateTime.Now.ToString("d");
-            rentals.ReturnDate =null;
+            rentals.ReturnDate = null;
             _rentalData.Add(rentals);
             return new DataSuccessResult<Rentals>("Success:Masin kiraye verildi");
         }
 
         public IDataResult<List<Rentals>> GetAll()
         {
-            
-            return new DataSuccessResult<List<Rentals>> (_rentalData.GetAll());
+
+            return new DataSuccessResult<List<Rentals>>(_rentalData.GetAll());
         }
 
 
         //GERI VERME
         public IDataResult<Rentals> Return(Rentals rentals)
         {
-                var result = _rentalData.Get(p => p.Id == rentals.Id&&p.ReturnDate==null);
+            var result = _rentalData.Get(p => p.Id == rentals.Id && p.ReturnDate == null);
 
-            if (result!=null)
+            if (result != null)
             {
 
-                    rentals.CustomerId = result.CustomerId;
-                    rentals.CarId = result.CarId;
-                    rentals.RentDate = result.RentDate;
-                    rentals.ReturnDate = DateTime.Now.ToString("d");
+                rentals.CustomerId = result.CustomerId;
+                rentals.CarId = result.CarId;
+                rentals.RentDate = result.RentDate;
+                rentals.ReturnDate = DateTime.Now.ToString("d");
 
-                    _rentalData.Update(rentals);
-                    return new DataSuccessResult<Rentals>("Success:Masin Qaytarildi");
+                _rentalData.Update(rentals);
+                return new DataSuccessResult<Rentals>("Success:Masin Qaytarildi");
             }
 
 

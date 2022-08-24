@@ -13,4 +13,8 @@
     <PackageReference Include="FluentValidation" Version="11.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Girilenler\Entities.csproj" />
+  </ItemGroup>
+
 </Project>

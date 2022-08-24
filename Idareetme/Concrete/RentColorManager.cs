@@ -1,18 +1,12 @@
 ﻿using Business.Abstract;
-using Entities.Concrete;
 using Girilenler.Concrete;
 using Melumatlar.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Utilites.Abstract;
 using Utilites.Concrete;
 
 namespace Business.Concrete
 {
-    public class RentColorManager: IRentColorManager
+    public class RentColorManager : IRentColorManager
     {
 
         IColorData _icolorData;
@@ -84,7 +78,7 @@ namespace Business.Concrete
         public IDataResult<Color> GetById(int id)
         {
             var result = _icolorData.Get(c => c.ColorId == id);
-            if (DateTime.Now.Month == a||result==null)
+            if (DateTime.Now.Month == a || result == null)
             {
                 return new DataErrorResult<Color>("Error getById");
             }
@@ -92,7 +86,7 @@ namespace Business.Concrete
             return new DataSuccessResult<Color>(result, "Success getById");
 
         }
-     
+
 
 
 
