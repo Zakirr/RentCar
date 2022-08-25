@@ -11,6 +11,6 @@ namespace Entities.Concrete
         public string? Date { get; set; }
         public string? ImagePath { get; set; }
         [NotMapped]
-        public IFormFile files { get; set; }
+        public IFormFile? files { get; set; }
     }
 }

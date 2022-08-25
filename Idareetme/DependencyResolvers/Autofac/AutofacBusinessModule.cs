@@ -5,6 +5,7 @@ using Business.Concrete;
 using Castle.DynamicProxy;
 using CoreAndUtilites.Utilities.Interceptors;
 using DataAcces.Abstract;
+using DataAcces.Concrete.EfCarData;
 using DataAcces.Concrete.EfData;
 using Idareetme.Abstract;
 using Idareetme.Concrete;
@@ -19,8 +20,21 @@ namespace Business.DependencyResolvers.Autofac
         {
             builder.RegisterType<RentCarManager>().As<IRentCarManager>().SingleInstance();
             builder.RegisterType<EfCarData>().As<ICarData>().SingleInstance();
+
             builder.RegisterType<CarImagesManager>().As<ICarImagesService>().SingleInstance();
             builder.RegisterType<EfCarImagesData>().As<ICarImagesData>().SingleInstance();
+
+            builder.RegisterType<EfBrandData>().As<IBrandData>().SingleInstance();
+            builder.RegisterType<RentBrandManager>().As<IRentBrandManager>().SingleInstance();
+
+            builder.RegisterType<EfColorData>().As<IColorData>().SingleInstance();
+            builder.RegisterType<RentColorManager>().As<IRentColorManager>().SingleInstance();
+
+            builder.RegisterType<EfRentalData>().As<IRentalsData>().SingleInstance();
+            builder.RegisterType<RentalsManager>().As<IRentalsManager>().SingleInstance();
+
+            builder.RegisterType<EfUsersData>().As<IUsersData>().SingleInstance();
+
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Castle.Core;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WebApi.Controllers
 {
@@ -23,10 +25,38 @@ namespace WebApi.Controllers
         {
 
             var result = _cm.Add(obj, @"C:\Users\Zakir\source\repos\RentCar\Melumatlar\Images\");
+
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+
         }
+        [HttpPost("delete")]
+        public IActionResult Delete([FromForm] CarImages images)
+        {
+
+            var result = _cm.Delete(images);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
+        [HttpPost("update")]
+        public IActionResult Update([FromForm] CarImages images)
+        {
+            var result = _cm.Update(images, @"C:\Users\Zakir\source\repos\RentCar\Melumatlar\Images\");
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
+    }
 }
